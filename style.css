@@ -9,3 +9,25 @@ body {
     background-attachment: fixed;
     font-family: Arial, sans-serif;
 }
+#hearts {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    overflow: hidden;
+}
+
+.heart {
+    position: absolute;
+    top: -50px;
+    font-size: 24px;
+    animation: fall linear forwards;
+}
+
+@keyframes fall {
+    from {
+        transform: translateY(-50px);
+    }
+    to {
+        transform: translateY(110vh);
+    }
+}
