@@ -133,3 +133,37 @@ button {
     font-size:13px;
     opacity:.9;
 }
+#openLetter{
+    padding:15px 30px;
+    border:none;
+    border-radius:40px;
+    font-size:20px;
+    cursor:pointer;
+    margin-top:25px;
+    background:#ff4f8b;
+    color:white;
+    box-shadow:0 0 20px rgba(255,79,139,.5);
+}
+
+#letter{
+    margin:30px auto;
+    max-width:650px;
+    background:rgba(255,255,255,.18);
+    backdrop-filter:blur(15px);
+    padding:30px;
+    border-radius:20px;
+    color:white;
+    line-height:1.8;
+    transform:scale(.8);
+    opacity:0;
+    transition:.8s;
+}
+
+#letter.show{
+    transform:scale(1);
+    opacity:1;
+}
+
+.hidden{
+    display:none;
+}
