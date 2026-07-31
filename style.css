@@ -92,3 +92,44 @@ button {
         transform: scale(1.08);
     }
 }
+#love-counter{
+    margin-top:30px;
+    text-align:center;
+    color:#fff;
+    background:rgba(255,255,255,.15);
+    backdrop-filter:blur(10px);
+    border:1px solid rgba(255,255,255,.25);
+    border-radius:20px;
+    padding:20px;
+    max-width:420px;
+    margin-left:auto;
+    margin-right:auto;
+    box-shadow:0 0 25px rgba(255,255,255,.25);
+}
+
+#love-counter h2{
+    margin:0 0 15px;
+    font-size:28px;
+}
+
+#love-counter .time{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:12px;
+}
+
+#love-counter .box{
+    background:rgba(255,255,255,.12);
+    border-radius:15px;
+    padding:12px;
+}
+
+#love-counter .number{
+    font-size:28px;
+    font-weight:bold;
+}
+
+#love-counter .label{
+    font-size:13px;
+    opacity:.9;
+}
