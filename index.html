@@ -242,6 +242,19 @@ function updateCounter(){
 updateCounter();
 setInterval(updateCounter,1000);
 </script>
+const btn=document.getElementById("openLetter");
+const letter=document.getElementById("letter");
+
+btn.addEventListener("click",()=>{
+
+    letter.classList.remove("hidden");
+
+    setTimeout(()=>{
+        letter.classList.add("show");
+    },50);
+
+    btn.innerHTML="❤️ Je t'aime ❤️";
+});
 <div id="hearts"></div>
 <div id="sparkles"></div>
 </body>
