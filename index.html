@@ -39,7 +39,7 @@
         </button>
 
     </div>
-
+<div id="love-counter"></div>
 </section>
 
 <section id="letter">
@@ -146,6 +146,80 @@ function createSparkle() {
 
 setInterval(createHeart, 500);
 setInterval(createSparkle, 350);
+</script>
+<script>
+const start = new Date("2025-06-03T00:00:00");
+
+function updateCounter(){
+
+    const now = new Date();
+
+    let years = now.getFullYear()-start.getFullYear();
+    let months = now.getMonth()-start.getMonth();
+    let days = now.getDate()-start.getDate();
+
+    if(days<0){
+        months--;
+        const lastMonth=new Date(now.getFullYear(),now.getMonth(),0);
+        days+=lastMonth.getDate();
+    }
+
+    if(months<0){
+        years--;
+        months+=12;
+    }
+
+    const diff=now-start;
+
+    const hours=Math.floor(diff/1000/60/60)%24;
+    const minutes=Math.floor(diff/1000/60)%60;
+    const seconds=Math.floor(diff/1000)%60;
+
+    document.getElementById("love-counter").innerHTML=`
+    <h2>❤️ Depuis le 03 Juin 2025 ❤️</h2>
+
+    <div class="time">
+
+        <div class="box">
+            <div class="number">${years}</div>
+            <div class="label">Années</div>
+        </div>
+
+        <div class="box">
+            <div class="number">${months}</div>
+            <div class="label">Mois</div>
+        </div>
+
+        <div class="box">
+            <div class="number">${days}</div>
+            <div class="label">Jours</div>
+        </div>
+
+        <div class="box">
+            <div class="number">${hours}</div>
+            <div class="label">Heures</div>
+        </div>
+
+        <div class="box">
+            <div class="number">${minutes}</div>
+            <div class="label">Minutes</div>
+        </div>
+
+        <div class="box">
+            <div class="number">${seconds}</div>
+            <div class="label">Secondes</div>
+        </div>
+
+    </div>
+
+    <p style="margin-top:20px;font-size:18px;">
+        💖 Chaque seconde passée avec toi rend notre histoire encore plus belle. 💖
+    </p>
+    `;
+}
+
+updateCounter();
+setInterval(updateCounter,1000);
 </script>
 <div id="hearts"></div>
 <div id="sparkles"></div>
